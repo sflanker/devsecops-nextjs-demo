@@ -7,7 +7,7 @@ export default function ServerInfo() {
 
   useEffect(
     () => {
-      fetch('/api/time')
+      fetch('/.netlify/functions/time')
         .then(async res => {
           const data = await res.json();
           setTime(data.time);
